@@ -1,3 +1,7 @@
-export default function LeaderboardEntry(): JSX.Element {
-    return <p>leaderboard entry : score</p> 
+interface LeaderboardEntryProps {
+    name : string
+}
+
+export default function LeaderboardEntry({name} : LeaderboardEntryProps): JSX.Element {
+    return <li>leaderboard entry: {name} : score</li> 
 }
