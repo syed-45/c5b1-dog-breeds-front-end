@@ -1,5 +1,4 @@
 import DogCard from "./DogCard/DogCard";
-import "./VoteSelector.css";
 
 export default function VoteSelector(): JSX.Element {
   return (
