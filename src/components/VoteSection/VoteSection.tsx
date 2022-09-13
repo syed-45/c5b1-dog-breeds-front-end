@@ -1,6 +1,6 @@
 import GoToLeaderboard from "./GoToLeaderboard";
 import VoteSelector from "./VoteSelector";
-import './VoteSection.css'
+import "./VoteSection.css";
 
 export default function VoteSection(): JSX.Element {
   return (
