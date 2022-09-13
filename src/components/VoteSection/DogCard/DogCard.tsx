@@ -8,6 +8,7 @@ export default function DogCard():JSX.Element {
             <div className="dog_card">
                 <DogPhoto />
                 <DogNameLabel />
+                <button>vote</button>
             </div>
         </>
     )
