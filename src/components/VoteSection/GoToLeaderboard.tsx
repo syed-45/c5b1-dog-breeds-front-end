@@ -1,6 +1,3 @@
-export default function GoToLeaderboard():JSX.Element {
-    return (
-        <>
-        </>
-    )
+export default function GoToLeaderboard(): JSX.Element {
+  return <></>;
 }

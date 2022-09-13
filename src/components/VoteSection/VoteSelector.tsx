@@ -1,14 +1,14 @@
 import DogCard from "./DogCard/DogCard";
-import "./VoteSelector.css"
+import "./VoteSelector.css";
 
-export default function VoteSelector():JSX.Element {
-    return (
-        <>
-            <p>VoteSelector</p>
-            <section id="vote_selector">
-                <DogCard />
-                <DogCard />
-            </section>
-        </>
-    )
+export default function VoteSelector(): JSX.Element {
+  return (
+    <>
+      <p>VoteSelector</p>
+      <section id="vote_selector">
+        <DogCard />
+        <DogCard />
+      </section>
+    </>
+  );
 }
