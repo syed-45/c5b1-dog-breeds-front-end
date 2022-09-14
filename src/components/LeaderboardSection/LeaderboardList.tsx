@@ -1,18 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { dogVote } from "../../types";
 import getTopTenBreeds from "../../utils/getTopTenBreeds";
 import LeaderboardEntry from "./LeaderboardEntry";
 
-export default function LeaderboardList(): JSX.Element {
+interface LeaderboardListProps {
+  leaderboard: dogVote[];
+  setLeaderboard: (dogVotes : dogVote[]) => void;
+}
 
-  const [leaderboard, setLeaderboard] = useState<dogVote[]>([])
+
+export default function LeaderboardList({ leaderboard, setLeaderboard }: LeaderboardListProps): JSX.Element {
+
 
   useEffect(() => {
     getTopTenBreeds().then((topTen) => {
       setLeaderboard(topTen)
       console.log(topTen)
     })
-  }, [])
+  }, [setLeaderboard])
 
   return (
     <>
