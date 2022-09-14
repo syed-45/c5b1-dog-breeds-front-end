@@ -10,6 +10,7 @@ export default function LeaderboardList(): JSX.Element {
   useEffect(() => {
     getTopTenBreeds().then((topTen) => {
       setLeaderboard(topTen)
+      console.log(topTen)
     })
   }, [])
 
@@ -19,9 +20,8 @@ export default function LeaderboardList(): JSX.Element {
       <ol id="leaderboard_list">
         {leaderboard.map((breedNameScore) => (
           <LeaderboardEntry
-            name={breedNameScore.breed_name}
+            breedNameScore={breedNameScore}
             key={breedNameScore.id}
-            vote={breedNameScore.vote}
           />
         ))}
       </ol>
