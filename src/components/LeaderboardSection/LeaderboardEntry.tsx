@@ -1,9 +1,10 @@
 interface LeaderboardEntryProps {
   name: string;
+  vote : number;
 }
 
 export default function LeaderboardEntry({
-  name,
+  name,vote
 }: LeaderboardEntryProps): JSX.Element {
-  return <li>leaderboard entry: {name} : score</li>;
+  return <li>leaderboard entry: {name} : score {vote}</li>;
 }

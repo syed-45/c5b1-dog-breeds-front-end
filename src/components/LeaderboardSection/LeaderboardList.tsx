@@ -1,22 +1,27 @@
+import { useEffect, useState } from "react";
+import { dogVote } from "../../types";
+import getTopTenBreeds from "../../utils/getTopTenBreeds";
 import LeaderboardEntry from "./LeaderboardEntry";
 
 export default function LeaderboardList(): JSX.Element {
-  const tempDogListPlaceholder = [
-    "afghan hound",
-    "beagle",
-    "labrador",
-    "basset hound",
-    "corgi",
-  ];
+
+  const [leaderboard, setLeaderboard] = useState<dogVote[]>([])
+
+  useEffect(() => {
+    getTopTenBreeds().then((topTen) => {
+      setLeaderboard(topTen)
+    })
+  }, [])
 
   return (
     <>
       <p>leaderboard list</p>
       <ol id="leaderboard_list">
-        {tempDogListPlaceholder.map((name) => (
+        {leaderboard.map((breedNameScore) => (
           <LeaderboardEntry
-            name={name}
-            key={tempDogListPlaceholder.indexOf(name)}
+            name={breedNameScore.breed_name}
+            key={breedNameScore.id}
+            vote={breedNameScore.vote}
           />
         ))}
       </ol>
