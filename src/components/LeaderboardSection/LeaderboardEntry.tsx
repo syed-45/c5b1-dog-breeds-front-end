@@ -8,5 +8,7 @@ export default function LeaderboardEntry({
   breedNameScore
 }: LeaderboardEntryProps): JSX.Element {
   const {breed_name, votes} = breedNameScore
-  return <li>leaderboard entry: {breed_name} : score {votes}</li>;
+  return (<li>
+            <mark>leaderboard entry: {breed_name} : score {votes}</mark>
+          </li>);
 }

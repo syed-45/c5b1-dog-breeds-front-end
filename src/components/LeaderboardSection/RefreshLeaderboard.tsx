@@ -15,7 +15,7 @@ export default function RefreshLeaderboard({ leaderboard, setLeaderboard }: Refr
   }
   return (
     <>
-      <button onClick={handleRefresh}>refresh leaderboard</button>
+      <button className="refresh-button" onClick={handleRefresh}>refresh leaderboard</button>
     </>
   );
 }

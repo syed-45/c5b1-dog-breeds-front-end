@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { dogVote } from "../../types";
 import LeaderboardList from "./LeaderboardList";
-import RefreshLeaderboard from "./RefreshLeaderboard";
+// import RefreshLeaderboard from "./RefreshLeaderboard";
 
 export default function Leaderboard(): JSX.Element {
   
@@ -10,7 +10,6 @@ export default function Leaderboard(): JSX.Element {
   return (
     <>
       <LeaderboardList leaderboard={leaderboard} setLeaderboard={setLeaderboard}/>
-      <RefreshLeaderboard leaderboard={leaderboard} setLeaderboard={setLeaderboard}/>
     </>
   );
 }
