@@ -23,8 +23,8 @@ export default function LeaderboardList({
 
   return (
     <>
-      <p>leaderboard list</p>
       <div className="leaderboard">
+        <h1>Leaderboard</h1>
         <ol id="leaderboard_list">
           {leaderboard.map((breedNameScore) => (
             <LeaderboardEntry
@@ -33,11 +33,11 @@ export default function LeaderboardList({
             />
           ))}
         </ol>
-        <RefreshLeaderboard
-          leaderboard={leaderboard}
-          setLeaderboard={setLeaderboard}
-        />
       </div>
+      <RefreshLeaderboard
+        leaderboard={leaderboard}
+        setLeaderboard={setLeaderboard}
+      />
     </>
   );
 }
