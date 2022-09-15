@@ -7,11 +7,11 @@ interface LeaderboardEntryProps {
 export default function LeaderboardEntry({
   breedNameScore,
 }: LeaderboardEntryProps): JSX.Element {
-  const { breedName, votes } = breedNameScore;
+  const { breedname, votes } = breedNameScore;
   return (
     <li>
       <mark>
-        {breedName} - {votes} votes
+        {breedname} - {votes} votes
       </mark>
     </li>
   );

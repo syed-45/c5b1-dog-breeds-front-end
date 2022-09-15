@@ -1,5 +1,5 @@
 export interface dogVote {
   id: number;
-  breedName: string;
+  breedname: string;
   votes: number;
 }
