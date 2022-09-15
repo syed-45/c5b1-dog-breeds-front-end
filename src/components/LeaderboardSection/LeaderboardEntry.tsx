@@ -11,7 +11,7 @@ export default function LeaderboardEntry({
   return (
     <li>
       <mark>
-        leaderboard entry: {breed_name} : score {votes}
+        {breed_name} - {votes} votes
       </mark>
     </li>
   );

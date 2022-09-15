@@ -33,11 +33,11 @@ export default function LeaderboardList({
             />
           ))}
         </ol>
-        <RefreshLeaderboard
+      </div>
+      <RefreshLeaderboard
           leaderboard={leaderboard}
           setLeaderboard={setLeaderboard}
         />
-      </div>
     </>
   );
 }

@@ -1,6 +1,8 @@
 #leaderboard_section {
   border: 4px dotted grey;
   height: 90vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* #leaderboard_list {
@@ -13,4 +15,5 @@
   border: none;
   font-size: medium;
   padding: 5px;
+  margin: 10px 30vw 200px 30vw
 }
