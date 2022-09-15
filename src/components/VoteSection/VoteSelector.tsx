@@ -1,39 +1,43 @@
 import { useEffect, useState } from "react";
-import axios from 'axios'
+import axios from "axios";
 import DogCard from "./DogCard/DogCard";
-import {getDogBreedName} from '../../utils/getDogBreedName';
+import { getDogBreedName } from "../../utils/getDogBreedName";
 
-interface breedNamesObjType {
-  breedName: string
-  imageURL: string
+interface BreedObjType {
+  breedName: string;
+  imageURL: string;
 }
 export default function VoteSelector(): JSX.Element {
-  const [twoBreedNamesObj, setTwoBreedNamesObj] = useState<breedNamesObjType[]>([])
+  const [twoBreedsObj, setTwoBreedsObj] = useState<BreedObjType[]>([]);
 
-  useEffect(()=>{
-    axios.get("https://dog.ceo/api/breeds/image/random/2")
-    .then((res) => {
-      const twoDogs: breedNamesObjType[] = [
+  useEffect(() => {
+    axios.get("https://dog.ceo/api/breeds/image/random/2").then((res) => {
+      setTwoBreedsObj([
         {
           breedName: getDogBreedName(res.data.message[0]),
-          imageURL: res.data.message[0]
-        },        
+          imageURL: res.data.message[0],
+        },
         {
           breedName: getDogBreedName(res.data.message[1]),
-          imageURL: res.data.message[1]
-        }
-      ]      
-      setTwoBreedNamesObj(twoDogs)
-    })
-  },[])
+          imageURL: res.data.message[1],
+        },
+      ]);
+    });
+  }, []);
 
   return (
     <>
       <p>VoteSelector</p>
       <section id="vote_selector">
-       {twoBreedNamesObj.map((oneBreedNameObj)=>{
-        return <DogCard key={oneBreedNameObj.breedName} dogBreedName={oneBreedNameObj.breedName} imageURL={oneBreedNameObj.imageURL} />        
-       })}
+        {twoBreedsObj.map((oneBreedObj) => {
+          return (
+            <DogCard
+              key={oneBreedObj.breedName}
+              dogBreedName={oneBreedObj.breedName}
+              imageURL={oneBreedObj.imageURL}
+            />
+          );
+        })}
       </section>
     </>
   );

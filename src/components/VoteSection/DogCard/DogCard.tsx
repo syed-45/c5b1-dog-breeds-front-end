@@ -2,9 +2,9 @@ import "./DogCard.css";
 import { Button, Card } from "react-bootstrap";
 import handleVote from "../../../utils/handleVote";
 
-interface DogCardProps{
-  dogBreedName: string,
-  imageURL: string
+interface DogCardProps {
+  dogBreedName: string;
+  imageURL: string;
 }
 
 export default function DogCard(props: DogCardProps): JSX.Element {

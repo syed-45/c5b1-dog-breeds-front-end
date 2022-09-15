@@ -2,9 +2,7 @@ import { getDogBreedName } from "./getDogBreedName";
 
 test("extracts the dog breed from the url", () => {
   expect(
-    getDogBreedName(
-      "https://images.dog.ceo/breeds/vizsla/n02100583_125.jpg"
-    )
+    getDogBreedName("https://images.dog.ceo/breeds/vizsla/n02100583_125.jpg")
   ).toBe("Vizsla");
   expect(
     getDogBreedName(
