@@ -11,18 +11,18 @@
 
 .refresh-button {
   color: white;
-  background-color:#fa6855;
+  background-color: #fa6855;
   border: none;
   font-size: medium;
   padding: 5px;
   margin: 20px auto 50px auto;
   width: 200px;
-  border-radius : 10px;
+  border-radius: 10px;
   border: 1px solid transparent;
 }
 
-.refresh-button:hover{
+.refresh-button:hover {
   background-color: white;
   border: 1px solid #3a404d;
-  color : #3a404d;
+  color: #3a404d;
 }

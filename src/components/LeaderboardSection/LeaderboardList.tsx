@@ -24,7 +24,7 @@ export default function LeaderboardList({
   return (
     <>
       <div className="leaderboard">
-      <h1>Leaderboard</h1>
+        <h1>Leaderboard</h1>
         <ol id="leaderboard_list">
           {leaderboard.map((breedNameScore) => (
             <LeaderboardEntry
@@ -35,9 +35,9 @@ export default function LeaderboardList({
         </ol>
       </div>
       <RefreshLeaderboard
-          leaderboard={leaderboard}
-          setLeaderboard={setLeaderboard}
-        />
+        leaderboard={leaderboard}
+        setLeaderboard={setLeaderboard}
+      />
     </>
   );
 }
