@@ -1,25 +1,25 @@
-import { useEffect} from "react";
+import { useEffect } from "react";
 import { dogVote } from "../../types";
-import "./LeaderboardList.scss"
+import "./LeaderboardList.scss";
 import getTopTenBreeds from "../../utils/getTopTenBreeds";
 import LeaderboardEntry from "./LeaderboardEntry";
 import RefreshLeaderboard from "./RefreshLeaderboard";
 
 interface LeaderboardListProps {
   leaderboard: dogVote[];
-  setLeaderboard: (dogVotes : dogVote[]) => void;
+  setLeaderboard: (dogVotes: dogVote[]) => void;
 }
 
-
-export default function LeaderboardList({ leaderboard, setLeaderboard }: LeaderboardListProps): JSX.Element {
-
-
+export default function LeaderboardList({
+  leaderboard,
+  setLeaderboard,
+}: LeaderboardListProps): JSX.Element {
   useEffect(() => {
     getTopTenBreeds().then((topTen) => {
-      setLeaderboard(topTen)
-      console.log(topTen)
-    })
-  }, [setLeaderboard])
+      setLeaderboard(topTen);
+      console.log(topTen);
+    });
+  }, [setLeaderboard]);
 
   return (
     <>
@@ -33,8 +33,11 @@ export default function LeaderboardList({ leaderboard, setLeaderboard }: Leaderb
             />
           ))}
         </ol>
-     <RefreshLeaderboard leaderboard={leaderboard} setLeaderboard={setLeaderboard}/>
+        <RefreshLeaderboard
+          leaderboard={leaderboard}
+          setLeaderboard={setLeaderboard}
+        />
       </div>
-     </>
+    </>
   );
 }

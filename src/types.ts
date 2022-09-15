@@ -1,5 +1,5 @@
 export interface dogVote {
-    id : number
-    breed_name : string
-    votes : number
+  id: number;
+  breed_name: string;
+  votes: number;
 }

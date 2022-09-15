@@ -4,12 +4,14 @@ import LeaderboardList from "./LeaderboardList";
 // import RefreshLeaderboard from "./RefreshLeaderboard";
 
 export default function Leaderboard(): JSX.Element {
-  
-  const [leaderboard, setLeaderboard] = useState<dogVote[]>([])
+  const [leaderboard, setLeaderboard] = useState<dogVote[]>([]);
 
   return (
     <>
-      <LeaderboardList leaderboard={leaderboard} setLeaderboard={setLeaderboard}/>
+      <LeaderboardList
+        leaderboard={leaderboard}
+        setLeaderboard={setLeaderboard}
+      />
     </>
   );
 }
