@@ -1,6 +1,6 @@
 import { extractBreedFromUrl } from "./extractBreedFromURL";
 
-test("extracts the dog breed from the url", () => {
+test.skip("extracts the dog breed from the url", () => {
   expect(
     extractBreedFromUrl(
       "https://images.dog.ceo/breeds/vizsla/n02100583_125.jpg"
