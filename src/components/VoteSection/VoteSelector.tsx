@@ -28,13 +28,12 @@ export default function VoteSelector(): JSX.Element {
 
   return (
     <>
-      <p>VoteSelector</p>
       <section id="vote_selector">
         {twoBreedsObj.map((oneBreedObj) => {
           return (
             <DogCard
               key={oneBreedObj.breedName}
-              dogBreedName={oneBreedObj.breedName}
+              breedname={oneBreedObj.breedName}
               imageURL={oneBreedObj.imageURL}
               setRefresh={setRefresh}
             />
