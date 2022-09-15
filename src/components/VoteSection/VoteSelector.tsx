@@ -28,7 +28,6 @@ export default function VoteSelector(): JSX.Element {
 
   return (
     <>
-      <p>VoteSelector</p>
       <section id="vote_selector">
         {twoBreedsObj.map((oneBreedObj) => {
           return (
