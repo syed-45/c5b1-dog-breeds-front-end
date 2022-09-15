@@ -9,9 +9,11 @@ interface BreedObjType {
 }
 export default function VoteSelector(): JSX.Element {
   const [twoBreedsObj, setTwoBreedsObj] = useState<BreedObjType[]>([]);
+  const [refresh, setRefresh] = useState<boolean>(false)
 
   useEffect(() => {
     axios.get("https://dog.ceo/api/breeds/image/random/2").then((res) => {
+      
       setTwoBreedsObj([
         {
           breedName: getDogBreedName(res.data.message[0]),
@@ -23,7 +25,7 @@ export default function VoteSelector(): JSX.Element {
         },
       ]);
     });
-  }, []);
+  }, [refresh]);
 
   return (
     <>
@@ -35,6 +37,7 @@ export default function VoteSelector(): JSX.Element {
               key={oneBreedObj.breedName}
               dogBreedName={oneBreedObj.breedName}
               imageURL={oneBreedObj.imageURL}
+              setRefresh={setRefresh}
             />
           );
         })}

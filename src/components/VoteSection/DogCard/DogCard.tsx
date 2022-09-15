@@ -5,9 +5,16 @@ import handleVote from "../../../utils/handleVote";
 interface DogCardProps {
   dogBreedName: string;
   imageURL: string;
+  setRefresh: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export default function DogCard(props: DogCardProps): JSX.Element {
+  const handleClick = ():void => {
+    handleVote(props.dogBreedName)
+    .then(() =>
+      props.setRefresh((prev) => !prev)
+    )
+  }
   return (
     <>
       <Card style={{ width: "17rem", textAlign: "center" }}>
@@ -22,7 +29,7 @@ export default function DogCard(props: DogCardProps): JSX.Element {
           <Button
             variant="primary"
             style={{ marginBottom: "8px" }}
-            onClick={() => handleVote(props.dogBreedName)}
+            onClick={handleClick}
           >
             Vote
           </Button>
