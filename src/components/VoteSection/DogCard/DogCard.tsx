@@ -10,13 +10,11 @@ interface DogCardProps {
 
 export default function DogCard(props: DogCardProps): JSX.Element {
   const handleClick = (): void => {
-    handleVote(props.breedname).then(() =>
-      props.setRefresh((prev) => !prev)
-    );
+    handleVote(props.breedname).then(() => props.setRefresh((prev) => !prev));
   };
   return (
     <>
-      <Card style={{ width: "17rem", textAlign: "center", height : '70vh' }}>
+      <Card style={{ width: "17rem", textAlign: "center", height: "70vh" }}>
         <Card.Img
           variant="top"
           src={props.imageURL}
@@ -24,7 +22,7 @@ export default function DogCard(props: DogCardProps): JSX.Element {
         />
         <Card.Body style={{ border: "1px solid lightgrey" }}>
           <Card.Title></Card.Title>
-          <Card.Text>{props.breedname}</Card.Text>
+          <Card.Text style={{ color: "black" }}>{props.breedname}</Card.Text>
           <Button
             variant="primary"
             style={{ marginBottom: "8px" }}
