@@ -25,7 +25,7 @@ Leaderboard
   //   left: 50%;
   //   transform: translate(-50%, -50%);
   width: 385px;
-  height: 308px;
+  height: 708px;
   background: linear-gradient(to bottom, #3a404d, #181c26);
   border-radius: 10px;
   box-shadow: 0 7px 30px rgba(62, 9, 11, 0.3);
@@ -220,7 +220,7 @@ Leaderboard
             top: -7px;
             bottom: auto;
             border-top: none;
-            border-bottom: 6px solid #a63d3d;
+            border-bottom: 6px solid rgb(184, 66, 66);
           }
         }
       }
@@ -238,7 +238,7 @@ Leaderboard
             top: -7px;
             bottom: auto;
             border-top: none;
-            border-bottom: 6px solid #a63d3d;
+            border-bottom: 6px solid rgb(184, 66, 66);
           }
         }
       }
@@ -256,7 +256,7 @@ Leaderboard
             top: -7px;
             bottom: auto;
             border-top: none;
-            border-bottom: 6px solid #a63d3d;
+            border-bottom: 6px solid rgb(175, 63, 63);
           }
         }
       }
@@ -274,7 +274,7 @@ Leaderboard
             top: -7px;
             bottom: auto;
             border-top: none;
-            border-bottom: 6px solid #a63d3d;
+            border-bottom: 6px solid #b04040;
           }
         }
       }
@@ -321,20 +321,4 @@ Leaderboard
   }
 }
 
-* {
-  //display: none;
-}
 
-.the-most {
-  position: fixed;
-  z-index: 1;
-  bottom: 0;
-  left: 0;
-  width: 50vw;
-  max-width: 200px;
-  padding: 10px;
-
-  img {
-    max-width: 100%;
-  }
-}

@@ -1,5 +1,4 @@
 #leaderboard_section {
-  border: 4px dotted grey;
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -10,10 +9,12 @@
 } */
 
 .refresh-button {
-  color: white;
-  background-color: #c24448;
+  color: #e1e1e1;
+  background-color:#3a404d;
   border: none;
   font-size: medium;
   padding: 5px;
-  margin: 10px 30vw 200px 30vw
+  margin: 10px auto 50px auto;
+  width: 200px;
+  border-radius : 10px
 }
