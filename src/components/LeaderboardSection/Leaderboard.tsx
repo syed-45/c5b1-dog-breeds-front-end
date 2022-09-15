@@ -1,11 +1,17 @@
+import { useState } from "react";
+import { dogVote } from "../../types";
 import LeaderboardList from "./LeaderboardList";
-import RefreshLeaderboard from "./RefreshLeaderboard";
+// import RefreshLeaderboard from "./RefreshLeaderboard";
 
 export default function Leaderboard(): JSX.Element {
+  const [leaderboard, setLeaderboard] = useState<dogVote[]>([]);
+
   return (
     <>
-      <LeaderboardList />
-      <RefreshLeaderboard />
+      <LeaderboardList
+        leaderboard={leaderboard}
+        setLeaderboard={setLeaderboard}
+      />
     </>
   );
 }

@@ -3,6 +3,14 @@
   height: 90vh;
 }
 
-#leaderboard_list {
-  border: 3px solid blue;
+/* #leaderboard_list {
+  border: 3px solid white;
+} */
+
+.refresh-button {
+  color: white;
+  background-color: #c24448;
+  border: none;
+  font-size: medium;
+  padding: 5px;
 }

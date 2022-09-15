@@ -1,9 +1,18 @@
+import { dogVote } from "../../types";
+
 interface LeaderboardEntryProps {
-  name: string;
+  breedNameScore: dogVote;
 }
 
 export default function LeaderboardEntry({
-  name,
+  breedNameScore,
 }: LeaderboardEntryProps): JSX.Element {
-  return <li>leaderboard entry: {name} : score</li>;
+  const { breed_name, votes } = breedNameScore;
+  return (
+    <li>
+      <mark>
+        leaderboard entry: {breed_name} : score {votes}
+      </mark>
+    </li>
+  );
 }
