@@ -16,7 +16,7 @@ export default function DogCard(props: DogCardProps): JSX.Element {
   };
   return (
     <>
-      <Card style={{ width: "17rem", textAlign: "center" }}>
+      <Card style={{ width: "17rem", textAlign: "center", height : '70vh' }}>
         <Card.Img
           variant="top"
           src={props.imageURL}
