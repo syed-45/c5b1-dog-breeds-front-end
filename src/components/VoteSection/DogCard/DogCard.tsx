@@ -2,25 +2,27 @@ import "./DogCard.css";
 import { Button, Card } from "react-bootstrap";
 import handleVote from "../../../utils/handleVote";
 
-const tempPhotoPlaceholder =
-  "https://images.dog.ceo/breeds/vizsla/n02100583_125.jpg";
+interface DogCardProps{
+  dogBreedName: string,
+  imageURL: string
+}
 
-export default function DogCard(): JSX.Element {
+export default function DogCard(props: DogCardProps): JSX.Element {
   return (
     <>
       <Card style={{ width: "17rem", textAlign: "center" }}>
         <Card.Img
           variant="top"
-          src={tempPhotoPlaceholder}
+          src={props.imageURL}
           style={{ maxWidth: "17rem" }}
         />
         <Card.Body style={{ border: "1px solid lightgrey" }}>
           <Card.Title></Card.Title>
-          <Card.Text>Breed</Card.Text>
+          <Card.Text>{props.dogBreedName}</Card.Text>
           <Button
             variant="primary"
             style={{ marginBottom: "8px" }}
-            onClick={handleVote}
+            onClick={() => handleVote(props.dogBreedName)}
           >
             Vote
           </Button>
