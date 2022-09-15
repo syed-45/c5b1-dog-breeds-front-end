@@ -7,7 +7,7 @@ export function extractBreedFromUrl(url: string): string {
   const arrayOfBreedSplitted = breed.split("-");
   const capitalisedArray: string[] = [];
   arrayOfBreedSplitted.map((breedElement) => {
-    capitalisedArray.push(
+    return capitalisedArray.push(
       breedElement[0].toUpperCase + breedElement.slice(1, breedElement.length)
     );
   });
