@@ -3,14 +3,14 @@ import { Button, Card } from "react-bootstrap";
 import handleVote from "../../../utils/handleVote";
 
 interface DogCardProps {
-  dogBreedName: string;
+  breedname: string;
   imageURL: string;
   setRefresh: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function DogCard(props: DogCardProps): JSX.Element {
   const handleClick = (): void => {
-    handleVote(props.dogBreedName).then(() =>
+    handleVote(props.breedname).then(() =>
       props.setRefresh((prev) => !prev)
     );
   };
@@ -24,7 +24,7 @@ export default function DogCard(props: DogCardProps): JSX.Element {
         />
         <Card.Body style={{ border: "1px solid lightgrey" }}>
           <Card.Title></Card.Title>
-          <Card.Text>{props.dogBreedName}</Card.Text>
+          <Card.Text>{props.breedname}</Card.Text>
           <Button
             variant="primary"
             style={{ marginBottom: "8px" }}

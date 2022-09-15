@@ -34,7 +34,7 @@ export default function VoteSelector(): JSX.Element {
           return (
             <DogCard
               key={oneBreedObj.breedName}
-              dogBreedName={oneBreedObj.breedName}
+              breedname={oneBreedObj.breedName}
               imageURL={oneBreedObj.imageURL}
               setRefresh={setRefresh}
             />
