@@ -1,5 +1,6 @@
 import "./DogCard.css";
 import { Button, Card } from "react-bootstrap";
+import handleVote from "../../../utils/handleVote";
 
 const tempPhotoPlaceholder =
   "https://images.dog.ceo/breeds/vizsla/n02100583_125.jpg";
@@ -16,7 +17,11 @@ export default function DogCard(): JSX.Element {
         <Card.Body style={{ border: "1px solid lightgrey" }}>
           <Card.Title></Card.Title>
           <Card.Text>Breed</Card.Text>
-          <Button variant="primary" style={{ marginBottom: "8px" }}>
+          <Button
+            variant="primary"
+            style={{ marginBottom: "8px" }}
+            onClick={handleVote}
+          >
             Vote
           </Button>
         </Card.Body>
