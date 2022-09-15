@@ -161,14 +161,6 @@ Leaderboard
           background: #d7514d;
           box-shadow: 0 1px 0 rgba(0, 0, 0, 0.11);
         }
-
-        & mark {
-          &::before,
-          &::after {
-            border-top: 2px solid #b0433f;
-            bottom: -3px;
-          }
-        }
       }
 
       &:nth-child(4) {
@@ -177,125 +169,55 @@ Leaderboard
           background: #cd4b4b;
           box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
         }
-
-        & mark {
-          &::before,
-          &::after {
-            top: -7px;
-            bottom: auto;
-            border-top: none;
-            border-bottom: 6px solid #a63d3d;
-          }
-        }
       }
 
       &:nth-child(5) {
-        background: #cd4b4b;
+        background: #be4545;
         &::after {
-          background: #cd4b4b;
+          background: #be4545;
           box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
-        }
-
-        & mark {
-          &::before,
-          &::after {
-            top: -7px;
-            bottom: auto;
-            border-top: none;
-            border-bottom: 6px solid #a63d3d;
-          }
         }
       }
 
       &:nth-child(6) {
-        background: #cd4b4b;
+        background: #af3f3f;
         &::after {
-          background: #cd4b4b;
+          background: #af3f3f;
           box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
-        }
-
-        & mark {
-          &::before,
-          &::after {
-            top: -7px;
-            bottom: auto;
-            border-top: none;
-            border-bottom: 6px solid rgb(184, 66, 66);
-          }
         }
       }
 
       &:nth-child(7) {
-        background: #cd4b4b;
+        background: #a53b3b;
         &::after {
-          background: #cd4b4b;
+          background: #a53b3b;
           box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
-        }
-
-        & mark {
-          &::before,
-          &::after {
-            top: -7px;
-            bottom: auto;
-            border-top: none;
-            border-bottom: 6px solid rgb(184, 66, 66);
-          }
         }
       }
 
       &:nth-child(8) {
-        background: #cd4b4b;
+        background: #a03939;
         &::after {
-          background: #cd4b4b;
+          background: #a03939;
           box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
-        }
-
-        & mark {
-          &::before,
-          &::after {
-            top: -7px;
-            bottom: auto;
-            border-top: none;
-            border-bottom: 6px solid rgb(175, 63, 63);
-          }
         }
       }
 
       &:nth-child(9) {
-        background: #cd4b4b;
+        background: #9a3737;
         &::after {
-          background: #cd4b4b;
+          background: #9a3737;
           box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
-        }
-
-        & mark {
-          &::before,
-          &::after {
-            top: -7px;
-            bottom: auto;
-            border-top: none;
-            border-bottom: 6px solid #b04040;
-          }
         }
       }
 
       &:nth-child(10) {
-        background: #c24448;
+        background: #8a3333;
         border-radius: 0 0 10px 10px;
         &::after {
-          background: #c24448;
+          background: #8a3333;
           box-shadow: 0 -2.5px 0 rgba(0, 0, 0, 0.12);
           border-radius: 0 0 10px 10px;
-        }
-
-        & mark {
-          &::before,
-          &::after {
-            top: -9px;
-            bottom: auto;
-            border-top: none;
-            border-bottom: 8px solid #993639;
-          }
         }
       }
     }
