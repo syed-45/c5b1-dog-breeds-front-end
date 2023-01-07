@@ -4,7 +4,7 @@ import { dogVote } from "../types";
 export default async function getTopTenBreeds(): Promise<dogVote[]> {
   try {
     const response = await axios.get(
-      "https://c5b1-dog-breeds.herokuapp.com/leaderboard"
+      "https://c5b1-dog-breeds-backend.up.railway.app/leaderboard"
     );
     const topTenBreeds: dogVote[] = response.data;
     return topTenBreeds;
