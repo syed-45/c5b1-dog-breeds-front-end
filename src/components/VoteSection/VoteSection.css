@@ -3,10 +3,8 @@
   flex-direction: row;
   justify-content: space-evenly;
   padding: 10px;
-  background-color: rgb(255, 255, 255);
 }
 
 #vote_section {
   width: 100vw;
-  height: 90vh;
 }
