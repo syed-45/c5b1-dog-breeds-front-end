@@ -14,19 +14,19 @@ export default function DogCard(props: DogCardProps): JSX.Element {
   };
   return (
     <>
-      <Card >
+      <Card>
         <Card.Img
           variant="top"
           src={props.imageURL}
-          style={{width:"300px",height:"300px",objectFit:"cover"}}
+          style={{ width: "300px", height: "300px", objectFit: "cover" }}
         />
-        <Card.Body  style={{textAlign:"center"}}>
+        <Card.Body style={{ textAlign: "center" }}>
           <Card.Title></Card.Title>
-          <Card.Text >{props.breedname}</Card.Text>
+          <Card.Text>{props.breedname}</Card.Text>
           <Button
-            variant="primary"            
+            variant="primary"
             onClick={handleClick}
-            style={{width:"70px",height:"40px"}}
+            style={{ width: "70px", height: "40px" }}
           >
             Vote
           </Button>
