@@ -26,6 +26,7 @@ export default function DogCard(props: DogCardProps): JSX.Element {
           <Button
             variant="primary"            
             onClick={handleClick}
+            style={{width:"70px",height:"40px"}}
           >
             Vote
           </Button>
