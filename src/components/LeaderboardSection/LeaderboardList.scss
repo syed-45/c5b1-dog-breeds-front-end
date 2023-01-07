@@ -9,11 +9,23 @@ Body
 
 body {
   min-height: 450px;
+  min-width: 450px;
   height: 100vh;
-  margin: 0;
-  //   background: radial-gradient(ellipse farthest-corner at center top, #f39264 0%, #f2606f 100%);
+  background: radial-gradient(white, lightblue);
+  margin: 0;  
   color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;  
+}
+
+#vote_section {
+  h1 {
+    margin-top: 37px;
+    text-align: center;
+  }
+  #vote_selector {
+    margin-top: 60px;
+  }
+  
 }
 
 /*--------------------
@@ -35,6 +47,7 @@ Leaderboard
     font-size: 18px;
     color: #e1e1e1;
     padding: 12px 13px 18px;
+    text-align: center;
 
     & svg {
       width: 25px;

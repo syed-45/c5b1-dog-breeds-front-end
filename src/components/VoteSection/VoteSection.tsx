@@ -5,7 +5,7 @@ import "./VoteSection.css";
 export default function VoteSection(): JSX.Element {
   return (
     <div id="vote_section">
-      <h1>Dog Breed Vote</h1>
+      <h1>Vote for the cutest dog breed!</h1>
       <VoteSelector />
       <GoToLeaderboard />
     </div>
